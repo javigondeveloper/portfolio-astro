@@ -1,0 +1,145 @@
+{
+  "basics": {
+    "name": "Edgardo Javier González",
+    "nickName": "Javier",
+    "label": "Desarrollador Full Stack",
+    "image": "/images/perfil-photo.png",
+    "email": "javiergonzalez.webdeveloper@gmail.com",
+    "phone": "+34 623 981566",
+    "url": "",
+    "summary": "Soy un apasionado desarrollador web full stack con habilidades orientadas a la resolución de problemas y la mejora continua de la experiencia de usuario. Mi enfoque no se limita simplemente a la codificación, sino que se extiende a la creación de soluciones prácticas y útiles que realmente impacten la vida de los usuarios. Con una sólida comprensión de las tecnologías front-end y back-end, me esfuerzo por construir aplicaciones web intuitivas y eficientes. Mi objetivo profesional es contribuir al desarrollo de productos que no solo cumplan con los estándares técnicos, sino que también ofrezcan una experiencia de usuario excepcional, facilitando así la vida de quienes interactúan con mis creaciones.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Málaga",
+      "countryCode": "ES",
+      "region": "Andalucía",
+      "country": "España"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "E. Javier González",
+        "url": "https://www.linkedin.com/in/edgardo-javier-gonzalez-full-stack-developer/"
+      },
+      {
+        "network": "GitHub-new",
+        "username": "javigondeveloper",
+        "url": "https://github.com/javigondeveloper"
+      },
+      {
+        "network": "GitHub-old",
+        "username": "JavierGonzalez0211",
+        "url": "https://github.com/JavierGonzalez0211"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Salonero",
+      "position": "Desarrollador Full Stack",
+      "shortDescription": "Proyecto MVP",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": "Actual",
+      "summary": "Actualmente trabajo como desarrollador full-stack en un proyecto MVP (Producto mínimo viable ) para un Sitio web dedicado a simplificar la búsqueda de lugares para eventos. En esto etapa estoy a cargo de obtener información de la API de Google Places, diseñar y crear la base de datos en postgreSQL y sembrarla. Crea la lógica para buscar los lugares, participar en el diseño del proyecto.",
+      "MVP description": "El producto mínimo viable es un prototipo del producto o servicio que quieres lanzar, con unas funciones mínimas que te permitan presentarlo a tus clientes potenciales y comprobar su interés por el mismo.",
+      "highlights": [
+        "stack: NextJS, TypeScript, Material UI, tailwind, postgreSQL "
+      ]
+    },
+    {
+      "name": "Contrato Freelance",
+      "position": "Desarrollador Front End",
+      "shortDescription": "Reemplazo de plataforma web para una compañía dedicada al marketing digital",
+      "url": "",
+      "startDate": "2021-04-01",
+      "endDate": "2023-07-31",
+      "summary": "Comencé modificando la plataforma original, lo que me permitió adquirir la experiencia de poder leer código realizado por otros desarrolladores y hacer las modificaciones necesarias. En la segunda etapa integré el equipo encargado de desarrollar la nueva plataforma que consiste en una herramienta que predice el presupuesto en publicidad que deben invertir los clientes. Mis tareas principales fueron: implementación y configuración de Material UI, filtros de datos complejos, diseño y creación de componentes React reutilizables, Hooks y páginas,colaborar en el diseño de la UX, implementación de Google Analytics, programación de pares (pair programming),aprobación de Pull Request",
+      "highlights": ["stack: React, TypeScript, Redux, Material UI"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Oracle Next Education",
+      "studyType": "Desarrollador Full Stack",
+      "startDate": "2022-06-01",
+      "endDate": "2022-12-01",
+      "courses": ["HTML", "CSS", "JavaScript", "Java"]
+    },
+    {
+      "institution": "Henry Bootcamp",
+      "studyType": "Desarrollador Full Stack",
+      "startDate": "2020-04-01",
+      "endDate": "2020-12-01",
+      "courses": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node JS",
+        "Express",
+        "Sequelize",
+        "PostgreSQL",
+        "Git",
+        "GitHub",
+        "Metodologías Scrum"
+      ]
+    },
+    {
+      "institution": "Udemy.com",
+      "studyType": "Cursos Varios",
+      "startDate": "2020",
+      "endDate": "2022",
+      "courses": [
+        "Desarrollo Web Completo con HTML5, CSS3, JS",
+        "JavaScript Moderno",
+        "React JS",
+        "TypeScript",
+        "Git - Github",
+        "Python Developer"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Desarrollador Web Full Stack",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Node JS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "NextJS",
+        "SQL",
+        "Figma",
+        "Google Analytics",
+        "Express"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Avanzado"
+    }
+  ],
+  "projects": [
+    {
+      "name": "- Proyecto Personal FOOD-CART (e-commerce)",
+      "startDate": "2023-07-01",
+      "endDate": "2023-07-31",
+      "description": "Desarrollo parcial de e-commerce, primer proyecto en NextJS",
+      "highlights": [
+        "stack: NextJS, TypeScript, React Hook Form, tailwind, MongoDB, Next-Authjs, Pay Pal "
+      ],
+      "url": "https://food-cart-project-7u413dihz￾javigondeveloper.vercel.app/"
+    }
+  ]
+}
