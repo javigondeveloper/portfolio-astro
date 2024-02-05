@@ -1,0 +1,37 @@
+---
+import Section from "@/components/Section.astro";
+import {languages} from "@cv-es";
+---
+
+<Section title={languages.title} >
+    <ul>
+        {
+            languages.description.map(({language, fluency})=> (
+                <li>
+                    <h4>{language}</h4>
+                    <span>{fluency}</span>
+                </li>
+            ))
+        }
+    </ul>
+</Section>
+
+<style>
+    ul {
+        display: flex;
+        gap: 1rem;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        padding: 8px;
+
+
+    }
+    span {
+        font-size: .8rem;
+    }
+</style>

@@ -2,7 +2,8 @@
 import { Image } from 'astro:assets'
 import {basics} from '@cv-es'
 import Section from '@/components/Section.astro'
-import profilePhoto from '@/images/perfil-photo.png'
+import photoPrint from '@/images/profile_sin_BG.png'
+import photoNoPrint from '@/images/profile_BG_celeste.png'
 import Mail from '@/icons/Mail.astro'
 import Phone from '@/icons/Phone.astro'
 import WorldMap from '@/icons/WorldMap.astro'
@@ -18,6 +19,11 @@ const SOCIAL_ICONS: Record<string, any> = {
     LinkedIn
 }
 
+const linkedInInfo = profiles.find(({network})=> network === 'LinkedIn')?.url
+const gitHubNew = profiles.find(({network})=> network === 'GitHub-new')?.url
+const gitHubOld = profiles.find(({network})=> network === 'GitHub-old')?.url
+
+
 ---
 
 <Section >
@@ -25,11 +31,18 @@ const SOCIAL_ICONS: Record<string, any> = {
         <div class="info">
             <h1>{name}</h1>
             <h2>{label}</h2>
-            <span>
+            <span class="worldIcon">
                 <WorldMap/>
                 {city}, {country}
             </span>
             <footer>
+                <div class="print">
+                <span>{email}</span>
+                <span>{phone}</span>
+                <span>{linkedInInfo}</span>
+
+                </div>
+                <div class="no-print">
                 {
                     email && (
                         <a href={`mailto:${email}`}
@@ -67,12 +80,14 @@ const SOCIAL_ICONS: Record<string, any> = {
                         )
                     })
                 }
+                </div>
             </footer>
         </div>
         <!-- <figure>
             <img src={image} alt={name}>
         </figure> -->
-        <Image class="img" src={profilePhoto} alt={name} width='100' height='100' />
+        <Image class={`img no-print`} src={photoNoPrint} alt={name} width='100' height='100' />
+        <Image class={`img print`} src={photoPrint} alt={name} width='100' height='100' />
     </div>
 </Section>
 
@@ -80,11 +95,11 @@ const SOCIAL_ICONS: Record<string, any> = {
 
     h2 {
         color: #444;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         text-wrap: balance;
     }
 
-    span {
+    .worldIcon {
         color: #666;
         display: flex;
         align-items: center;
@@ -94,7 +109,7 @@ const SOCIAL_ICONS: Record<string, any> = {
 
     }
 
-    footer {
+    .no-print {
         display: flex;
         gap: 8px;
         margin-top: 8px;
@@ -129,11 +144,31 @@ const SOCIAL_ICONS: Record<string, any> = {
         object-fit: cover;
         border-radius: 16px;
     }
+
     .info {
         display: flex;
         flex-direction: column;
         gap: .5rem;
 
+    }
+
+    .print {
+        display: none;
+    }
+
+    @media print {
+        .print {
+            display: block;
+        }
+
+        .print span{
+        display: block;
+        font-size: .75rem;
+        color: #444;
+    }
+        .no-print {
+            display: none;
+        }
     }
 
 </style>

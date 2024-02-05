@@ -1,7 +1,96 @@
 ---
 import Section from "@/components/Section.astro";
+import {projects} from '@cv-es';
+import GitHub from "@/icons/GitHub.astro";
+import ExternalLink from "@/icons/ExternalLink.astro";
 ---
 
-<Section title="Proyectos">
+<Section title={projects.title}>
+
+    <ul>
+        {
+            projects.description.map(({name, description, highlights, url, gitHub })=>{
+                return (
+                    <li>
+                        <article>
+                            <header>
+                              <a href={url} title={`Ver el proyecto ${name}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >
+                                <h4>{name}</h4>
+                                <span>{<ExternalLink/>}</span>
+                              </a>
+                              <p>
+                                {description}
+                              </p>
+                           </header>
+                           <footer>
+                            <ul class="highlights">
+                                {
+                                    highlights.map ((highlight) => (
+                                        <li><p>{highlight}</p></li>
+                                    ))
+                                }
+                            </ul>
+                            <div>
+                                <a href={gitHub} 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                <GitHub/>
+                                <span class="github">{gitHub }</span>
+                                {<ExternalLink/>}</a>
+                            </div>
+                           </footer> 
+                        </article>    
+                    </li>
+                )
+            })
+        }
+    </ul>
 
 </Section>
+
+<style>
+    article {
+        border-radius: 8px;
+        border: 1px solid #f2f2f2;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+        gap: 4px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+     a {
+        color: #666;
+        display: flex;
+        gap: 4px;
+        align-items: flex-start;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+   .github {
+        font-size: .8rem;
+    }
+    .highlights {
+        font-weight: 600;
+    }
+</style>
