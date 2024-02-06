@@ -52,7 +52,7 @@ const titles = {
                 <span>{linkedInInfo}</span>
 
                 </div>
-                <div class="no-print">
+                <div class={`contact-icons no-print`}>
                 {
                     email && (
                         <a href={`mailto:${email}`}
@@ -117,8 +117,7 @@ const titles = {
 
     }
 
-    .no-print {
-        display: flex;
+    .contact-icons {
         gap: 8px;
         margin-top: 8px;
     }
@@ -158,25 +157,6 @@ const titles = {
         flex-direction: column;
         gap: .5rem;
 
-    }
-
-    .print {
-        display: none;
-    }
-
-    @media print {
-        .print {
-            display: block;
-        }
-
-        .print span{
-        display: block;
-        font-size: .75rem;
-        color: #444;
-    }
-        .no-print {
-            display: none;
-        }
     }
 
 </style>
