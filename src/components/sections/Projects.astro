@@ -1,8 +1,18 @@
 ---
 import Section from "@/components/Section.astro";
-import {projects} from '@cv-es';
+import {cv} from "@cv";
 import GitHub from "@/icons/GitHub.astro";
 import ExternalLink from "@/icons/ExternalLink.astro";
+
+type Language = keyof typeof cv
+const lang: Language = Astro.props.lang
+const {projects} = cv[lang];
+
+const title = {
+    es: `Ver el proyecto `,
+    en: `See the project `
+}
+
 ---
 
 <Section title={projects.title}>
@@ -14,7 +24,7 @@ import ExternalLink from "@/icons/ExternalLink.astro";
                     <li>
                         <article>
                             <header>
-                              <a href={url} title={`Ver el proyecto ${name}`}
+                              <a href={url} title={`${title[lang]} ${name}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               >

@@ -1,6 +1,9 @@
 ---
 import Section from "@/components/Section.astro";
-import {education,cvLang} from '@cv-es'
+import {cv} from "@cv";
+type Language = keyof typeof cv
+const lang: Language = Astro.props.lang
+const {education} = cv[lang];
 import {getPeriod} from '@/utils'
 ---
 
@@ -8,7 +11,7 @@ import {getPeriod} from '@/utils'
     <ul>
         {
             education.description.map(({institution, startDate, endDate, studyType, courses})=> {
-                const period = getPeriod(startDate,endDate,cvLang.code)
+                const period = getPeriod(startDate,endDate,lang)
                 return (
                     <li>
                         <article>

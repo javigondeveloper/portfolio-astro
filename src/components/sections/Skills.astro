@@ -1,6 +1,9 @@
 ---
 import Section from "@/components/Section.astro";
-import {skills} from '@cv-es'
+import {cv} from "@cv";
+type Language = keyof typeof cv
+const lang: Language = Astro.props.lang
+const {skills} = cv[lang];
 ---
 
 <Section title={skills.title}>
