@@ -20,7 +20,7 @@ const { title,lang } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Menu/>
+		<Menu lang={lang}/>
 		<slot />
 	</body>
 </html>
