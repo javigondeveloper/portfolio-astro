@@ -1,0 +1,32 @@
+---
+import FileDownload from '@/icons/FileDownload.astro'
+const {lang} = Astro.props
+---
+
+
+<nav id="navbar" class="no-print">
+    <button>imprimir</button>
+    <a
+       
+        href=`./public/${lang}/Javier Gonzalez - CV-${lang}.pdf`
+        download="Javier Gonzalez - CV.pdf"
+        target="_blank"
+      >
+       <FileDownload/>
+      </a>
+    <button>Español</button>
+    <button>English</button>
+    <button>Oscuro</button>
+    <button>Claro</button>
+</nav>
+    <style>
+
+        nav{
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+
+    </style>
+
+
+

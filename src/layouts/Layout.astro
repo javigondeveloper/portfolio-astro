@@ -1,4 +1,6 @@
 ---
+import Menu from '@/components/Menu.astro'
+
 interface Props {
 	title: string;
 	lang: string
@@ -18,6 +20,7 @@ const { title,lang } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Menu lang={lang}/>
 		<slot />
 	</body>
 </html>
@@ -80,6 +83,33 @@ p {
 	margin-block: .5rem;
 	margin: 0;
 }
+
+/*only for print elements  */
+.print {
+        display: none;
+    }
+
+	/* non printable elements */
+.no-print {
+        display: flex;
+
+    }
+
+
+@media print {
+        .print {
+            display: block;
+        }
+
+        .print span{
+        display: block;
+        font-size: .75rem;
+        color: #444;
+    }
+        .no-print {
+            display: none;
+        }
+    }
 
 
 @media (prefers-color-schema: dark) {
