@@ -1,6 +1,6 @@
 # Curriculum Vitae Digital imprimible
 
-> La información se encuentra guardada en los archivos cv-[idioma].json
+> La información tanto en español como en inglés se encuentra guardada en el archivo src/resumes/cv.json
 >
 > Este proyecto fue realizado con el framework <strong>Astro<strong>
 
