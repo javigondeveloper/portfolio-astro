@@ -1,19 +1,19 @@
 ---
 import FileDownload from '@/icons/FileDownload.astro'
 import Print from '@/icons/Print.astro'
-import Moon from '@/icons/Moon.astro'
-import Sun from '@/icons/Sun.astro'
+import ThemeMode from './ThemeMode.astro'
+import Language from './LanguageButton.astro'
 const {lang} = Astro.props
 ---
 
 <header class="no-print">
 <nav >
-    <section>
-        <button
-        id="print"
-        >
-            <Print/>
-        </button>
+    <button
+    id="print"
+    >
+        <Print/>
+    </button>
+        
     <button>
     <a
         title="Download CV"
@@ -23,40 +23,16 @@ const {lang} = Astro.props
       >
        <FileDownload/>
       </a>
-    </section>
+    
+        <ThemeMode/>
 
-    <section>
-        <button>
-            <Moon/>
-        </button>
-        <button>
-            <Sun/>
-        </button>
-    </section>
-
-    <section>
-        <button
-        disabled={lang==="es"}>
-        <a href="/">
-            Español
-        </a> 
-        </button>
-        <button
-        disabled={lang==="en"}>
-        <a href="/en"
-        >
-            English
-        </a>
-        </button>
-    </section>
-   
-   
+        <Language lang={lang}/>
 </nav>
 </header>
     <style>
 
         header {
-            background-color: #ddd;
+            background-color: var(--bg-menu);
             padding:.5rem 1rem;
             position: fixed;
             width: 100%;
@@ -64,34 +40,17 @@ const {lang} = Astro.props
 
         nav{
             display: flex;
-            justify-content: space-between;
+            position: relative;
+            justify-content:end;
             width: 100%;
             max-width: 700px;
             margin: 0 auto;
-        }
-
-        button {
-            height: 100%;
-            width: 65px;
-            color: #444;
-            border-radius: 6px;
-            border: 1px solid #666;
-            /* background-color: transparent; */
-        }
-
-        button:hover {
-            background-color: #ccc;
-            cursor: pointer;
-        }
-
-        button:disabled {
-            pointer-events: none;
+            gap: 8px;
         }
 
         a {
-            color: #444;
+            color: #777;
         }
-
 
     </style>
 
