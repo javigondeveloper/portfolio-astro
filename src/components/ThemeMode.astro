@@ -1,0 +1,53 @@
+---
+import Moon from "@/icons/Moon.astro";
+import Sun from "@/icons/Sun.astro";
+---
+
+   <button id="moon">
+       <Moon/>
+   </button >
+   <button id="sun" class="invisible">
+        <Sun/>
+  </button>
+  
+  <style>
+    .invisible {
+        display: none;
+    }
+   
+  </style>
+
+<script is:inline>
+
+     const $moonBtn = document.getElementById("moon")
+    const $sunBtn = document.getElementById("sun")
+
+    let theme = (() => {
+      if (typeof localStorage !== 'undefined' && sessionStorage.getItem('theme')) {
+        return sessionStorage.getItem('theme');
+      }
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+        return 'light';
+    })();
+
+    document.documentElement.setAttribute('data-theme', theme);
+    window.sessionStorage.setItem('theme', theme);
+
+    if(theme === "dark") {
+        $moonBtn.classList.toggle("invisible");
+        $sunBtn.classList.toggle("invisible");
+    }
+  
+    const handleToggleClick = () => {
+        theme = theme==="light" ? "dark" : "light";
+        $moonBtn.classList.toggle("invisible");
+        $sunBtn.classList.toggle("invisible");
+        document.documentElement.setAttribute('data-theme', theme);
+        window.sessionStorage.setItem('theme', theme);
+    }
+
+    document.getElementById("moon").addEventListener("click", handleToggleClick);
+    document.getElementById("sun").addEventListener("click", handleToggleClick);
+  </script>

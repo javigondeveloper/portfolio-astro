@@ -1,0 +1,31 @@
+---
+const {lang} = Astro.props
+---
+
+<button
+        disabled={lang==="es"}>
+        <a href="/">
+            <strong>Es</strong>
+        </a> 
+        </button>
+        <button
+        disabled={lang==="en"}
+        >
+        <a href="/en"
+        >
+            <strong>En</strong>
+        </a>
+</button>
+
+<style>
+
+a {
+            color: #777;
+        }
+
+       
+        strong {
+            font-weight: 900;
+        }
+
+</style>

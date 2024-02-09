@@ -16,7 +16,7 @@ const {skills} = cv[lang];
                     <div class="skills">
                     {
                         keywords.map (keyword => (
-                            <span>
+                            <span class="keyword">
                                 {keyword}
                             </span>
                         ))
@@ -45,13 +45,25 @@ const {skills} = cv[lang];
         flex-wrap: wrap;
     }
 
-    span {
+    .keyword {
         border-radius: 4px;
-        background-color: #eee;
+        background-color: #ddd;
+        color: #333;
+        font-size: .8rem;
+        font-weight: 500;
+        padding: 4px 6px;
+    }
+
+    @media print {
+
+        .keyword{
+            border-radius: 4px;
+        background-color: #ddd;
         color: black;
         font-size: .8rem;
         font-weight: 500;
         padding: 4px 6px;
+    }
     }
 
 </style>
