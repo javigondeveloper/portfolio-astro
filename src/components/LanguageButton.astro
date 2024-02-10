@@ -1,19 +1,24 @@
 ---
+import {i18n} from "@/i18n.ts"
 const {lang} = Astro.props
+const {language} = i18n[lang as keyof typeof i18n]
+const languageToGo = language=== 'español' ? 'english' : 'español'
 ---
 
 <button
-        disabled={lang==="es"}>
+        disabled={lang==="es"}
+        title={languageToGo}>
         <a href="/">
-            <strong>Es</strong>
+            <strong>ES</strong>
         </a> 
         </button>
         <button
         disabled={lang==="en"}
+        title={languageToGo}
         >
         <a href="/en"
         >
-            <strong>En</strong>
+            <strong>EN</strong>
         </a>
 </button>
 

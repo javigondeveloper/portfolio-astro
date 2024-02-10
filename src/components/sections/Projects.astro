@@ -3,16 +3,11 @@ import Section from "@/components/Section.astro";
 import {cv} from "@cv";
 import GitHub from "@/icons/GitHub.astro";
 import ExternalLink from "@/icons/ExternalLink.astro";
-
+import {i18n} from "@/i18n.ts"
 type Language = keyof typeof cv
 const lang: Language = Astro.props.lang
+const {project, gitHubProject} = i18n[lang]
 const {projects} = cv[lang];
-
-const title = {
-    es: `Ver el proyecto `,
-    en: `See the project `
-}
-
 ---
 
 <Section title={projects.title}>
@@ -24,7 +19,8 @@ const title = {
                     <li>
                         <article>
                             <header>
-                              <a href={url} title={`${title[lang]} ${name}`}
+                              <a href={url}
+                              title={`${project}${name}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               >
@@ -45,6 +41,7 @@ const title = {
                             </ul>
                             <div>
                                 <a href={gitHub} 
+                                title={`${gitHubProject}${name}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >
@@ -65,7 +62,7 @@ const title = {
 <style>
     article {
         border-radius: 8px;
-        border: 1px solid #f2f2f2;
+        border: 1px solid #ddd;
         padding: 1rem;
         display: flex;
         flex-direction: column;

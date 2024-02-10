@@ -1,12 +1,18 @@
 ---
 import Moon from "@/icons/Moon.astro";
 import Sun from "@/icons/Sun.astro";
+import {i18n} from "@/i18n.ts"
+const {lang} = Astro.props
+const {dark, light} = i18n[lang as keyof typeof i18n].themeMode
 ---
 
-   <button id="moon">
+   <button id="moon"
+   title={dark}>
        <Moon/>
    </button >
-   <button id="sun" class="invisible">
+   <button id="sun"
+   class="invisible"
+   title={light}>
         <Sun/>
   </button>
   
@@ -23,7 +29,7 @@ import Sun from "@/icons/Sun.astro";
     const $sunBtn = document.getElementById("sun")
 
     let theme = (() => {
-      if (typeof localStorage !== 'undefined' && sessionStorage.getItem('theme')) {
+      if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('theme')) {
         return sessionStorage.getItem('theme');
       }
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
