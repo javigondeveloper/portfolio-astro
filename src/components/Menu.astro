@@ -3,20 +3,24 @@ import FileDownload from '@/icons/FileDownload.astro'
 import Print from '@/icons/Print.astro'
 import ThemeMode from './ThemeMode.astro'
 import Language from './LanguageButton.astro'
+import {i18n} from "@/i18n.ts"
 const {lang} = Astro.props
+const {download, print} = i18n[lang as keyof typeof i18n]
+
 ---
 
 <header class="no-print">
 <nav >
     <button
     id="print"
+    title={print}
     >
         <Print/>
     </button>
         
     <button>
     <a
-        title="Download CV"
+        title={download}
         href=`./public/${lang}/Javier Gonzalez - CV-${lang}.pdf`
         download="Javier Gonzalez - CV.pdf"
         target="_blank"
@@ -24,7 +28,7 @@ const {lang} = Astro.props
        <FileDownload/>
       </a>
     
-        <ThemeMode/>
+        <ThemeMode lang={lang}/>
 
         <Language lang={lang}/>
 </nav>

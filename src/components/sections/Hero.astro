@@ -8,33 +8,18 @@ import WorldMap from '@/icons/WorldMap.astro'
 import LinkedIn from '@/icons/LinkedIn.astro'
 import GitHub from '@/icons/GitHub.astro'
 import {cv} from '@cv'
+import {i18n} from "@/i18n.ts"
 type Language = keyof typeof cv
 const lang: Language = Astro.props.lang
 const {name, nickName, label, location, profiles, phone, email} = cv[lang].basics
 const {city, country} = location
-
-
+const {emailTitle, phoneTitle, profilesTitle} = i18n[lang]
 const SOCIAL_ICONS: Record<string, any> = {
     "GitHub-new":GitHub,
     "GitHub-old": GitHub,
     LinkedIn
 }
-
 const linkedInInfo = profiles.find(({network}:{network:string})=> network === 'LinkedIn')?.url
-
-
-const titles = {
-    es: {
-        email: `Enviar un correo electrónico a ${nickName} al correo ${email}`,
-        phone: `Llamar por teléfono a ${nickName} al número ${phone}`,
-        profiles: `Visitar el perfil de ${nickName} en `
-    },
-    en: {
-        email: `Send email to ${nickName} to the  address ${email}`,
-        phone: `Phone call to ${nickName} to the number ${phone}`,
-        profiles: `Visit the profile of ${nickName} in `
-    }
-}
 ---
 
 <Section >
@@ -57,7 +42,7 @@ const titles = {
                 {
                     email && (
                         <a href={`mailto:${email}`}
-                        title={titles[lang].email}
+                        title={`${emailTitle}${email}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         >
@@ -68,7 +53,7 @@ const titles = {
                 {
                     phone && (
                         <a href={`tel:${phone}`}
-                        title={titles[lang].phone}
+                        title={`${phoneTitle}${phone}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         >
@@ -82,7 +67,7 @@ const titles = {
                         return (
                             <a
                             href={url}
-                            title={`${titles[lang].profiles} ${network}`}
+                            title={`${profilesTitle}${network}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             >
