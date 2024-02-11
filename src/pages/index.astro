@@ -25,7 +25,13 @@ import Languages from '@/components/sections/Languages.astro';
 <style>
 	main {
 		padding: 4rem;
-		margin: auto;
+		margin: 0 auto;
 		width: 100%;
 	}
+
+	@media (max-width: 500px) {
+	main {
+		padding: 4rem 1.5rem;
+	}
+}
 </style>

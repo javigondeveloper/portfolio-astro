@@ -24,9 +24,9 @@ const { title,lang } = Astro.props;
 		<slot />
 	</body>
 </html>
+
+
 <style is:global>
-
-
 	:root[data-theme="light"] {
 		--bg-color: #efefef;
 		--bg-menu: #ddd;
@@ -46,28 +46,29 @@ const { title,lang } = Astro.props;
 		
 	}
 
-
 	html {
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		letter-spacing: -0.025rem;
+		font-size: clamp(0.8rem, 0.6667rem + 0.7619vw, 1rem);
 		background: var(--bg-color) ;
 		color: var(--color1);
-		letter-spacing: -0.025rem;
 	}
+
 	body, figure {
 		margin: 0%;
 		padding: 0%;
 	}
-
 	
 	a {
 		text-decoration: none;
 	}
+
 	ul {
 		list-style: none;
 		margin: 0%;
 		padding: 0%;
-
 	}
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -101,12 +102,14 @@ p {
 
 button {
             height: 100%;
-            width: 40px;
+            width: 2.5rem;
             color: #777;
             border-radius: 4px;
             border: 1px solid #efefef;
 			background-color: transparent;
 			display: block;
+			padding: 1px 4px;
+			text-align: center;
 
         }
 
@@ -149,6 +152,13 @@ button {
 		--color2: #ccc; /* h4 */
 		--color3: #bbb; /* p */
 	}	
+}
+
+@media (max-width: 500px) {
+	
+	h1 {
+		font-size: 1.4rem;
+	}
 }
 
 </style>
