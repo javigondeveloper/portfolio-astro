@@ -1,164 +1,170 @@
 ---
-import Menu from '@/components/Menu.astro'
+import Menu from '@/components/Menu.astro';
 
 interface Props {
-	title: string;
-	lang: string
+  title: string;
+  lang: string;
 }
 
-const { title,lang } = Astro.props;
+const { title, lang } = Astro.props;
 ---
 
 <!doctype html>
-<html  lang={lang}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Curriculum Vitae digital" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/JG_icon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Menu lang={lang}/>
-		<slot />
-	</body>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Curriculum Vitae digital" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/JG_icon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Menu lang={lang} />
+    <slot />
+  </body>
 </html>
 
-
 <style is:global>
-	:root[data-theme="light"] {
-		--bg-color: #efefef;
-		--bg-menu: #ddd;
-		--bg-button: rgb(240, 240, 240);
-		--color1: #444; /*html h1 h2 h3 */
-		--color2: #666; /* h4 */
-		--color3: #333; /* p */
-	}
+  :root[data-theme='light'] {
+    --bg-color: #efefef;
+    --bg-menu: #ddd;
+    --bg-menu-button: #454545;
+    --bg-button: rgb(240, 240, 240);
+    --color1: #333; /*html h1 h2 h3 */
+    --color2: #4d4d4d; /* h4 */
+    --color3: #444; /* p */
+  }
 
-	:root[data-theme="dark"] {
-		--bg-color: rgb(23, 24, 28);
-		--bg-menu: #222;
-		--bg-button: rgb(107, 107, 107);
-		--color1: #fff; /*html h1 h2 h3 */ 
-		--color2: #ccc; /* h4 */
-		--color3: #bbb; /* p */
-		
-	}
+  :root[data-theme='dark'] {
+    --bg-color: rgb(23, 24, 28);
+    --bg-menu: #222;
+    --bg-menu-button: #adadad;
+    --bg-button: rgb(107, 107, 107);
+    --color1: #fff; /*html h1 h2 h3 */
+    --color2: #ccc; /* h4 */
+    --color3: #bbb; /* p */
+  }
 
-	html {
-		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		letter-spacing: -0.025rem;
-		font-size: clamp(0.8rem, 0.6667rem + 0.7619vw, 1rem);
-		background: var(--bg-color) ;
-		color: var(--color1);
-	}
+  html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -0.025rem;
+    font-size: clamp(0.8rem, 0.6667rem + 0.7619vw, 1rem);
+    background: var(--bg-color);
+    color: var(--color1);
+  }
 
-	body, figure {
-		margin: 0%;
-		padding: 0%;
-	}
-	
-	a {
-		text-decoration: none;
-	}
+  body,
+  figure {
+    margin: 0%;
+    padding: 0%;
+  }
 
-	ul {
-		list-style: none;
-		margin: 0%;
-		padding: 0%;
-	}
+  a {
+    text-decoration: none;
+  }
 
-*, *::before, *::after {
-	box-sizing: border-box;
-}
+  ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+  }
 
-h1, h2, h3, h4 {
-	margin: 0;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: var(--color1);
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-}
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color1);
+  }
 
-h3 {
-	font-size: 1.1rem;
-}
+  h3 {
+    font-size: 1.1rem;
+  }
 
-h4 {
-	font-size: 1rem;
-	font-weight: 600;
-	color: var(--color2);
-}
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color2);
+  }
 
-p {
-	color: var(--color3);
-	font-size: .8rem;
-	line-height: 1.3;
-	text-wrap: pretty;
-	margin-block: .5rem;
-	margin: 0;
-}
+  p {
+    color: var(--color3);
+    font-size: 0.8rem;
+    line-height: 1.3;
+    text-wrap: pretty;
+    margin-block: 0.5rem;
+    margin: 0;
+  }
 
+  span {
+    color: var(--color3);
+  }
 
-button {
-            height: 100%;
-            width: 2.5rem;
-            color: #777;
-            border-radius: 4px;
-            border: 1px solid #efefef;
-			background-color: transparent;
-			display: block;
-			padding: 1px 4px;
-			text-align: center;
+  button {
+    height: 100%;
+    width: 2.5rem;
+    color: #777;
+    border-radius: 4px;
+    border: 1px solid #efefef;
+    background-color: transparent;
+    display: block;
+    padding: 1px 4px;
+    text-align: center;
+  }
 
-        }
+  button:hover {
+    background-color: var(--bg-button);
+    cursor: pointer;
+  }
 
-        button:hover {
-            background-color: var(--bg-button);
-            cursor: pointer;
-        }
+  button:disabled {
+    display: none;
+  }
 
-        button:disabled {
-			display: none;
-		}
-		
-/*only for printable elements  */
-.print {
-        display: none;
+  /*only for printable elements  */
+  .print {
+    display: none;
+  }
+
+  /* non printable elements */
+  .no-print {
+    display: flex;
+  }
+
+  @media print {
+    .print {
+      display: block;
+      background-color: #fff;
     }
 
-	/* non printable elements */
-.no-print {
-        display: flex;
-
+    .no-print {
+      display: none;
     }
+  }
 
-@media print {
-        .print {
-            display: block;
-			background-color: #fff;
-        }
-
-   
-        .no-print {
-            display: none;
-        }
+  @media (prefers-color-schema: dark) {
+    :root[data-theme] {
+      --bg-color: rgb(23, 24, 28);
+      --bg-menu: #222;
+      --bg-menu-button: #adadad;
+      --bg-button: rgb(107, 107, 107);
+      --color1: #fff; /*html h1 h2 h3 */
+      --color2: #ccc; /* h4 */
+      --color3: #bbb; /* p */
     }
+  }
 
-@media (prefers-color-schema: dark) {
-	:root[data-theme] {
-		--bg-color: rgb(23, 24, 28);
-		--color1: #fff; /*html h1 h2 h3 */ 
-		--color2: #ccc; /* h4 */
-		--color3: #bbb; /* p */
-	}	
-}
-
-@media (max-width: 500px) {
-	
-	h1 {
-		font-size: 1.4rem;
-	}
-}
-
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
 </style>

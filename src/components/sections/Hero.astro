@@ -1,155 +1,164 @@
 ---
-import Section from '@/components/Section.astro'
-import photoPrint from '@/images/profile_sin_BG.webp'
-import photoNoPrint from '@/images/profile_BG_celeste.webp'
-import Mail from '@/icons/Mail.astro'
-import Phone from '@/icons/Phone.astro'
-import WorldMap from '@/icons/WorldMap.astro'
-import LinkedIn from '@/icons/LinkedIn.astro'
-import GitHub from '@/icons/GitHub.astro'
-import {cv} from '@cv'
-import {i18n} from "@/i18n.ts"
-type Language = keyof typeof cv
-const lang: Language = Astro.props.lang
-const {name, nickName, label, location, profiles, phone, email} = cv[lang].basics
-const {city, country} = location
-const {emailTitle, phoneTitle, profilesTitle} = i18n[lang]
+import Section from '@/components/Section.astro';
+import photoPrint from '@/images/profile_sin_BG.webp';
+import photoNoPrint from '@/images/profile_BG_celeste.webp';
+import Mail from '@/icons/Mail.astro';
+import Phone from '@/icons/Phone.astro';
+import WorldMap from '@/icons/WorldMap.astro';
+import LinkedIn from '@/icons/LinkedIn.astro';
+import GitHub from '@/icons/GitHub.astro';
+import { cv } from '@cv';
+import { i18n } from '@/i18n.ts';
+type Language = keyof typeof cv;
+const lang: Language = Astro.props.lang;
+const { name, label, location, profiles, phone, email } = cv[lang].basics;
+const { city, country } = location;
+const { emailTitle, phoneTitle, profilesTitle } = i18n[lang];
 const SOCIAL_ICONS: Record<string, any> = {
-    "GitHub-new":GitHub,
-    "GitHub-old": GitHub,
-    LinkedIn
-}
-const linkedInInfo = profiles.find(({network}:{network:string})=> network === 'LinkedIn')?.url
+  'GitHub-new': GitHub,
+  'GitHub-old': GitHub,
+  LinkedIn,
+};
+const linkedInInfo = profiles.find(
+  ({ network }: { network: string }) => network === 'LinkedIn'
+)?.url;
 ---
 
-<Section >
-    <div class="container">
-        <div class="info">
-            <h1>{name}</h1>
-            <h2>{label}</h2>
-            <span class="worldIcon">
-                <WorldMap/>
-                {city}, {country}
-            </span>
-            <footer>
-                <div class="print">
-                <span>{email}</span>
-                <span>{phone}</span>
-                <span>{linkedInInfo}</span>
-
-                </div>
-                <div class={`contact-icons no-print`}>
-                {
-                    email && (
-                        <a href={`mailto:${email}`}
-                        title={`${emailTitle}${email}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                        <Mail/>
-                        </a>
-                    )
-                }
-                {
-                    phone && (
-                        <a href={`tel:${phone}`}
-                        title={`${phoneTitle}${phone}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                        <Phone/>
-                        </a>
-                    )
-                }
-                {
-                    profiles.map(({network,url })=> {
-                        const Icon = SOCIAL_ICONS[network]
-                        return (
-                            <a
-                            href={url}
-                            title={`${profilesTitle}${network}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >
-                            <Icon/>
-                            </a>
-                        )
-                    })
-                }
-                </div>
-            </footer>
+<Section>
+  <div class="container">
+    <div class="info">
+      <h1>{name}</h1>
+      <h2>{label}</h2>
+      <span class="worldIcon">
+        <WorldMap />
+        {city}, {country}
+      </span>
+      <footer>
+        <div class="print">
+          <span>{email}</span>
+          <span>{phone}</span>
+          <span>{linkedInInfo}</span>
         </div>
-        <img class={`img no-print`} src={photoNoPrint.src} alt={name} width='100' height='100'  />
-        <img class={`img print`} src={photoPrint.src} alt={name} width='100' height='100' />
-       
+        <div class={`contact-icons no-print`}>
+          {
+            email && (
+              <a
+                href={`mailto:${email}`}
+                title={`${emailTitle}${email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Mail />
+              </a>
+            )
+          }
+          {
+            phone && (
+              <a
+                href={`tel:${phone}`}
+                title={`${phoneTitle}${phone}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Phone />
+              </a>
+            )
+          }
+          {
+            profiles.map(({ network, url }) => {
+              const Icon = SOCIAL_ICONS[network];
+              return (
+                <a
+                  href={url}
+                  title={`${profilesTitle}${network}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon />
+                </a>
+              );
+            })
+          }
+        </div>
+      </footer>
     </div>
+    <img
+      class={`img no-print`}
+      src={photoNoPrint.src}
+      alt={name}
+      width="100"
+      height="100"
+    />
+    <img
+      class={`img print`}
+      src={photoPrint.src}
+      alt={name}
+      width="100"
+      height="100"
+    />
+  </div>
 </Section>
 
 <style>
+  h2 {
+    color: var(--color1);
+    font-size: 1.2rem;
+    text-wrap: balance;
+  }
 
-    h2 {
-        color: var(--color1);
-        font-size: 1.2rem;
-        text-wrap: balance;
-    }
+  .worldIcon {
+    color: var(--color2);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    letter-spacing: -0.05rem;
+  }
 
-    .worldIcon {
-        color: var(--color2);
-        display: flex;
-        align-items: center;
-        gap: .25rem;
-        font-size: .85rem;
-        letter-spacing: -0.05rem ;
+  .contact-icons {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
 
-    }
+  footer a {
+    color: var(--bg-menu-button);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    padding: 4px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
 
-    .contact-icons {
-        gap: .5rem;
-        margin-top: .5rem;
-    }
+  footer a:hover {
+    background: #eee;
+    border: 1px solid #ccc;
+  }
 
-    footer a {
-        color: #777;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #eee;
-        padding: 4px;
-        height: 2rem;
-        width: 2rem;
-        border-radius: 6px;
-        transition: all .3s ease;
-    }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 
-    footer a:hover {
-        background: #eee;
-        border: 1px solid #ccc;
-    }
+  .img {
+    object-fit: cover;
+    border-radius: 1rem;
+  }
 
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 500px) {
     .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        
+      flex-direction: column-reverse;
     }
-
-    .img {
-        object-fit: cover;
-        border-radius: 1rem;
-    }
-
-    .info {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-
-    }
-
-    @media (max-width: 500px) {
-        .container {
-            flex-direction: column-reverse;
-        }
-}
-
+  }
 </style>

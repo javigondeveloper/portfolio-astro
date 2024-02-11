@@ -1,36 +1,27 @@
 ---
-import {i18n} from "@/i18n.ts"
-const {lang} = Astro.props
-const {language} = i18n[lang as keyof typeof i18n]
-const languageToGo = language=== 'español' ? 'english' : 'español'
+import { i18n } from '@/i18n.ts';
+const { lang } = Astro.props;
+const { language } = i18n[lang as keyof typeof i18n];
+const languageToGo = language === 'español' ? 'english' : 'español';
 ---
 
-<button
-        disabled={lang==="es"}
-        title={languageToGo}>
-        <a href="/">
-            <strong>ES</strong>
-        </a> 
-        </button>
-        <button
-        disabled={lang==="en"}
-        title={languageToGo}
-        >
-        <a href="/en"
-        >
-            <strong>EN</strong>
-        </a>
+<button disabled={lang === 'es'} title={languageToGo}>
+  <a class="menu-button" href="/">
+    <strong>ES</strong>
+  </a>
+</button>
+<button disabled={lang === 'en'} title={languageToGo}>
+  <a class="menu-button" href="/en">
+    <strong>EN</strong>
+  </a>
 </button>
 
 <style>
+  .menu-button {
+    color: var(--bg-menu-button);
+  }
 
-a {
-            color: #777;
-        }
-
-       
-        strong {
-            font-weight: 900;
-        }
-
+  strong {
+    font-weight: 900;
+  }
 </style>

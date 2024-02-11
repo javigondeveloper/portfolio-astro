@@ -1,69 +1,61 @@
 ---
-import Section from "@/components/Section.astro";
-import {cv} from "@cv";
-type Language = keyof typeof cv
-const lang: Language = Astro.props.lang
-const {skills} = cv[lang];
+import Section from '@/components/Section.astro';
+import { cv } from '@cv';
+type Language = keyof typeof cv;
+const lang: Language = Astro.props.lang;
+const { skills } = cv[lang];
 ---
 
 <Section title={skills.title}>
-
-    <ul>
-        {
-            skills.description.map (({name, keywords})=>(
-                <li>
-                    <h4>{name}</h4>
-                    <div class="skills">
-                    {
-                        keywords.map (keyword => (
-                            <span class="keyword">
-                                {keyword}
-                            </span>
-                        ))
-                    }
-                    </div>
-                </li>
-            ))
-        }
-    </ul>
-
+  <ul>
+    {
+      skills.description.map(({ name, keywords }) => (
+        <li>
+          <h3>{name}</h3>
+          <div class="skills">
+            {keywords.map((keyword) => (
+              <span class="keyword">{keyword}</span>
+            ))}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
 </Section>
 
 <style>
-    ul {
-        display: inline-flex;
-        gap: 8px;
-    }
-    li {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-    .skills{
-        display: flex;
-        gap: 4px;
-        flex-wrap: wrap;
-    }
+  ul {
+    display: inline-flex;
+    gap: 8px;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .skills {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
 
+  .keyword {
+    border-radius: 4px;
+    background-color: #ddd;
+    color: #333;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 4px 6px;
+  }
+
+  @media print {
     .keyword {
-        border-radius: 4px;
-        background-color: #ddd;
-        color: #333;
-        font-size: .8rem;
-        font-weight: 500;
-        padding: 4px 6px;
+      border-radius: 4px;
+      background-color: #ddd;
+      color: black;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 4px 6px;
     }
-
-    @media print {
-
-        .keyword{
-            border-radius: 4px;
-        background-color: #ddd;
-        color: black;
-        font-size: .8rem;
-        font-weight: 500;
-        padding: 4px 6px;
-    }
-    }
-
+  }
 </style>
