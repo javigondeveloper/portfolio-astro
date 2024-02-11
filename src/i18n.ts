@@ -10,8 +10,8 @@ export const i18n = {
     emailTitle: `Enviar un correo electrónico a la dirección `,
     phoneTitle: `Llamar por teléfono al número `,
     profilesTitle: `Visitar el perfil en `,
-    project: `Ver el proyecto `,
-    gitHubProject: 'visitar el gitHub del proyecto ',
+    project: `ir al sitio`,
+    gitHubProject: 'ver el código en GitHub',
   },
   en: {
     themeMode: {
@@ -24,7 +24,7 @@ export const i18n = {
     emailTitle: `Send email to the  address `,
     phoneTitle: `Phone call to the number `,
     profilesTitle: `Visit the profile in `,
-    project: `See the project `,
-    gitHubProject: 'visit the gitHub of the project ',
+    project: 'visit site',
+    gitHubProject: 'see code in GitHub',
   },
 };

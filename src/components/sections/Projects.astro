@@ -1,103 +1,93 @@
 ---
-import Section from "@/components/Section.astro";
-import {cv} from "@cv";
-import GitHub from "@/icons/GitHub.astro";
-import ExternalLink from "@/icons/ExternalLink.astro";
-import {i18n} from "@/i18n.ts"
-type Language = keyof typeof cv
-const lang: Language = Astro.props.lang
-const {project, gitHubProject} = i18n[lang]
-const {projects} = cv[lang];
+import Section from '@/components/Section.astro';
+import { cv } from '@cv';
+import GitHub from '@/icons/GitHub.astro';
+import ExternalLink from '@/icons/ExternalLink.astro';
+import { i18n } from '@/i18n.ts';
+type Language = keyof typeof cv;
+const lang: Language = Astro.props.lang;
+const { project, gitHubProject } = i18n[lang];
+const { projects } = cv[lang];
 ---
 
 <Section title={projects.title}>
-
-    <ul>
-        {
-            projects.description.map(({name, type, description, highlights, url, gitHub })=>{
-                return (
-                    <li>
-                        <article>
-                            <header>
-                              <a href={url}
-                              title={`${project}${name}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >
-                                <h3>{name}</h3>
-                                <span>{<ExternalLink/>}</span>
-                                </a>
-                                <h4>{type}</h4>
-                              <p>
-                                {description}
-                              </p>
-                           </header>
-                           <footer>
-                            <ul class="highlights">
-                                {
-                                    highlights.map ((highlight) => (
-                                        <li><p>{highlight}</p></li>
-                                    ))
-                                }
-                            </ul>
-                            <div>
-                                <a href={gitHub} 
-                                title={`${gitHubProject}${name}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >
-                                <GitHub/>
-                                <p>
-                                    {gitHub }
-                                </p>
-                                {<ExternalLink/>}</a>
-                            </div>
-                           </footer> 
-                        </article>    
-                    </li>
-                )
-            })
+  <ul>
+    {
+      projects.description.map(
+        ({ name, type, description, highlights, url, gitHub }) => {
+          return (
+            <li>
+              <article>
+                <header>
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    <h3>{name}</h3>
+                    <span>{project}</span>
+                    <span>{<ExternalLink />}</span>
+                  </a>
+                  <h4>{type}</h4>
+                  <p>{description}</p>
+                </header>
+                <footer>
+                  <ul class="highlights">
+                    {highlights.map((highlight) => (
+                      <li>
+                        <p>{highlight}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <div>
+                    <a href={gitHub} target="_blank" rel="noopener noreferrer">
+                      <GitHub />
+                      <p>{gitHubProject}</p>
+                      {<ExternalLink />}
+                    </a>
+                  </div>
+                </footer>
+              </article>
+            </li>
+          );
         }
-    </ul>
-
+      )
+    }
+  </ul>
 </Section>
 
 <style>
-    article {
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
+  article {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
-    header {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 8px;
-        gap: 4px;
-    }
+  header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    gap: 4px;
+  }
 
-    footer {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 4px;
-    }
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
 
-     a {
-        color: #666;
-        display: flex;
-        gap: 4px;
-        align-items: flex-start;
-        max-width: fit-content;
-    }
+  a {
+    color: #666;
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+    max-width: fit-content;
+  }
 
-    a:hover {
-        text-decoration: underline;
-    }
-    .highlights {
-        font-weight: 600;
-    }
+  a:hover {
+    text-decoration: underline;
+  }
+  .highlights {
+    font-weight: 600;
+  }
 </style>

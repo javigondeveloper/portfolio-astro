@@ -7,11 +7,12 @@ const {dark, light} = i18n[lang as keyof typeof i18n].themeMode
 ---
 
    <button id="moon"
+   class="menu-button"
    title={dark}>
        <Moon/>
    </button >
    <button id="sun"
-   class="invisible"
+   class="invisible menu-button"
    title={light}>
         <Sun/>
   </button>
@@ -20,6 +21,9 @@ const {dark, light} = i18n[lang as keyof typeof i18n].themeMode
     .invisible {
         display: none;
     }
+    .menu-button {
+            color: var(--bg-menu-button);
+        }
    
   </style>
 
