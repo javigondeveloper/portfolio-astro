@@ -1,75 +1,77 @@
 ---
-import Section from "@/components/Section.astro";
-import {cv} from "@cv";
-type Language = keyof typeof cv
-const lang: Language = Astro.props.lang
-const {work} = cv[lang];
-import {getPeriod} from '@/utils'
+import Section from '@/components/Section.astro';
+import { cv } from '@cv';
+type Language = keyof typeof cv;
+const lang: Language = Astro.props.lang;
+const { work } = cv[lang];
+import { getPeriod } from '@/utils';
 ---
 
 <Section title={work.title}>
-    <ul>
-        {
-            work.description.map(({name, startDate, endDate, shortDescription, position, summary, highlights})=> {
-                const period = getPeriod(startDate,endDate,lang)
-                return (
-                    <li>
-                        <article>
-                            <header>
-                                <div>
-                                    <h3>{name}</h3> 
-                                    <h4>{position}</h4>
-                                    <p>{shortDescription}</p>
-                                </div>
-                                <time >
-                                    {period}
-                                </time>
-                            </header>
-                            <footer>
-                                <p>{summary}</p>
-                                <p class="highlights">{highlights}</p>
-                            </footer>
-                        </article>
-                    </li>
-                )
-            })
+  <ul>
+    {
+      work.description.map(
+        ({
+          name,
+          startDate,
+          endDate,
+          shortDescription,
+          position,
+          summary,
+          highlights,
+        }) => {
+          const period = getPeriod(startDate, endDate, lang);
+          return (
+            <li>
+              <article>
+                <header>
+                  <div>
+                    <h3>{name}</h3>
+                    <h4>{position}</h4>
+                    <p>{shortDescription}</p>
+                  </div>
+                  <time>{period}</time>
+                </header>
+                <footer>
+                  <p>{summary}</p>
+                  <p class="highlights">{highlights}</p>
+                </footer>
+              </article>
+            </li>
+          );
         }
-    </ul>
-
+      )
+    }
+  </ul>
 </Section>
 
 <style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  time {
+    font-size: 0.8rem;
+    text-wrap: nowrap;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .highlights {
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 500px) {
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 8px;
-        
+      flex-direction: column;
     }
-
-    time {
-        font-size: .8rem;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .highlights{
-        font-weight: 600;
-        margin-top: 4px;
-    }
-
-    @media (max-width: 500px) {
-        header {
-            flex-direction: column;
-
-        }
-
-    }
-
-   
-
+  }
 </style>

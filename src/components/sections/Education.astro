@@ -1,73 +1,66 @@
 ---
-import Section from "@/components/Section.astro";
-import {cv} from "@cv";
-type Language = keyof typeof cv
-const lang: Language = Astro.props.lang
-const {education} = cv[lang];
-import {getPeriod} from '@/utils'
+import Section from '@/components/Section.astro';
+import { cv } from '@cv';
+type Language = keyof typeof cv;
+const lang: Language = Astro.props.lang;
+const { education } = cv[lang];
+import { getPeriod } from '@/utils';
 ---
 
 <Section title={education.title}>
-    <ul>
-        {
-            education.description.map(({institution, startDate, endDate, studyType, courses})=> {
-                const period = getPeriod(startDate,endDate,lang)
-                return (
-                    <li>
-                        <article>
-                            <header>
-                                <div>
-                                    <h3>{studyType}</h3> 
-                                    <h4>{institution}</h4>
-                                </div>
-                                <time >
-                                    {period}
-                                </time>
-                            </header>
-                            <footer>
-                                <p class="highlights">{
-                                    courses.join(', ')
-                                }</p>
-                            </footer>
-                        </article>
-                    </li>
-                )
-            })
+  <ul>
+    {
+      education.description.map(
+        ({ institution, startDate, endDate, studyType, courses }) => {
+          const period = getPeriod(startDate, endDate, lang);
+          return (
+            <li>
+              <article>
+                <header>
+                  <div>
+                    <h3>{studyType}</h3>
+                    <h4>{institution}</h4>
+                  </div>
+                  <time>{period}</time>
+                </header>
+                <footer>
+                  <p class="highlights">{courses.join(', ')}</p>
+                </footer>
+              </article>
+            </li>
+          );
         }
-    </ul>
-
+      )
+    }
+  </ul>
 </Section>
 
 <style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    font-size: 0.8rem;
+    text-wrap: nowrap;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .highlights {
+    font-weight: 600;
+  }
+
+  @media (max-width: 500px) {
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 4px;
+      flex-direction: column;
     }
-
-    time {
-        font-size: .8rem;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .highlights{
-        font-weight: 600;
-    }
-
-    @media (max-width: 500px) {
-        header {
-            flex-direction: column;
-
-        }
-
-    }
-
-   
-
+  }
 </style>
