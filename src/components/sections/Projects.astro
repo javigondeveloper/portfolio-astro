@@ -14,7 +14,7 @@ const {projects} = cv[lang];
 
     <ul>
         {
-            projects.description.map(({name, description, highlights, url, gitHub })=>{
+            projects.description.map(({name, type, description, highlights, url, gitHub })=>{
                 return (
                     <li>
                         <article>
@@ -24,9 +24,10 @@ const {projects} = cv[lang];
                               target="_blank"
                               rel="noopener noreferrer"
                               >
-                                <h4>{name}</h4>
+                                <h3>{name}</h3>
                                 <span>{<ExternalLink/>}</span>
-                              </a>
+                                </a>
+                                <h4>{type}</h4>
                               <p>
                                 {description}
                               </p>
@@ -46,7 +47,9 @@ const {projects} = cv[lang];
                                 rel="noopener noreferrer"
                                 >
                                 <GitHub/>
-                                <span class="github">{gitHub }</span>
+                                <p>
+                                    {gitHub }
+                                </p>
                                 {<ExternalLink/>}</a>
                             </div>
                            </footer> 
@@ -93,10 +96,6 @@ const {projects} = cv[lang];
 
     a:hover {
         text-decoration: underline;
-    }
-
-   .github {
-        font-size: .8rem;
     }
     .highlights {
         font-weight: 600;

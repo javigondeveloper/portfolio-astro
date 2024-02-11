@@ -154,7 +154,8 @@
         "title": "Proyectos",
         "description": [
           {
-            "name": "FOOD-CART (e-commerce)",
+            "name": "FOOD-CART",
+            "type": "(e-commerce)",
             "startDate": "2023-07-01",
             "endDate": "2023-07-31",
             "description": "Proyecto Personal, desarrollo parcial de e-commerce, primer proyecto en NextJS",
@@ -322,7 +323,8 @@
         "title": "Projects",
         "description": [
           {
-            "name": "FOOD-CART (e-commerce)",
+            "name": "FOOD-CART",
+            "type": "(e-commerce)",
             "startDate": "2023-07-01",
             "endDate": "2023-07-31",
             "description": "Personal Project, partial development of e-commerce, first project in NextJS",
