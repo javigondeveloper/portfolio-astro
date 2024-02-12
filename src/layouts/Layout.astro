@@ -140,6 +140,22 @@ const { title, lang } = Astro.props;
   }
 
   @media print {
+    h1,
+    h2,
+    h3,
+    time {
+      color: #333;
+    }
+
+    h4 {
+      color: #4d4d4d;
+    }
+
+    p,
+    span {
+      color: #444;
+    }
+
     .print {
       display: block;
       background-color: #fff;
