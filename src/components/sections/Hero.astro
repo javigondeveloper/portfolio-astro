@@ -1,7 +1,5 @@
 ---
 import Section from '@/components/Section.astro';
-import photoPrint from '@/images/profile_sin_BG.webp';
-import photoNoPrint from '@/images/profile_BG_celeste.webp';
 import Mail from '@/icons/Mail.astro';
 import Phone from '@/icons/Phone.astro';
 import WorldMap from '@/icons/WorldMap.astro';
@@ -82,20 +80,6 @@ const linkedInInfo = profiles.find(
         </div>
       </footer>
     </div>
-    <img
-      class={`img no-print`}
-      src={photoNoPrint.src}
-      alt={name}
-      width="100"
-      height="100"
-    />
-    <img
-      class={`img print`}
-      src={photoPrint.src}
-      alt={name}
-      width="100"
-      height="100"
-    />
   </div>
 </Section>
 
