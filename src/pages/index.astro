@@ -10,28 +10,32 @@ import Languages from '@/components/sections/Languages.astro';
 ---
 
 <Layout title="Javier Gonzalez - CV-Portfolio" lang="es">
-	<main>
-		<Hero lang = "es"/>
-		<About lang = "es"/>
-		<Experience lang = "es"/>
-		<Education lang = "es"/>
-		<Projects lang = "es"/>
-		<Skills lang = "es"/>
-		<Languages lang = "es"/>
-
-	</main>
+  <main>
+    <Hero lang="es" />
+    <About lang="es" />
+    <Experience lang="es" />
+    <Education lang="es" />
+    <Projects lang="es" />
+    <Skills lang="es" />
+    <Languages lang="es" />
+  </main>
 </Layout>
 
 <style>
-	main {
-		padding: 4rem;
-		margin: 0 auto;
-		width: 100%;
-	}
+  main {
+    padding: 4rem;
+    margin: 0 auto;
+    width: 100%;
+  }
 
-	@media (max-width: 500px) {
-	main {
-		padding: 4rem 1.5rem;
-	}
-}
+  @media (max-width: 500px) {
+    main {
+      padding: 4rem 1.5rem;
+    }
+  }
+  @media print {
+    main {
+      padding: 1rem 4rem;
+    }
+  }
 </style>
