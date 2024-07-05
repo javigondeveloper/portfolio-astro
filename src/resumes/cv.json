@@ -45,13 +45,13 @@
         "title": "Experiencia Laboral",
         "description": [
           {
-            "name": "Salonero",
+            "name": "Salonero -  Contrato Freelance",
             "position": "Desarrollador Full Stack",
             "shortDescription": "Proyecto MVP",
             "url": "",
             "startDate": "2024-01-01",
-            "endDate": "Actual",
-            "summary": "Actualmente trabajo como desarrollador full-stack en un proyecto MVP (Producto mínimo viable ) para un Sitio web dedicado a simplificar la búsqueda de lugares para eventos. En esto etapa estoy a cargo de obtener información de la API de Google Places, diseñar y crear la base de datos en postgreSQL y sembrarla. Crea la lógica para buscar los lugares, participar en el diseño del proyecto.",
+            "endDate": "2024-04-15",
+            "summary": "Me desempeñé como desarrollador full-stack en un proyecto MVP (Producto mínimo viable ) para un Sitio web dedicado a simplificar la búsqueda de sitios para eventos. Estuve a cargo de obtener información de la API de Google Places, diseñar y crear la base de datos en postgreSQL y sembrarla. Crea la lógica para buscar los lugares, participar en el diseño del proyecto.",
             "MVP description": "El producto mínimo viable es un prototipo del producto o servicio que quieres lanzar, con unas funciones mínimas que te permitan presentarlo a tus clientes potenciales y comprobar su interés por el mismo.",
             "highlights": [
               "stack: NextJS, TypeScript, Material UI, tailwind, postgreSQL "
@@ -63,7 +63,7 @@
             "shortDescription": "Reemplazo de plataforma web para una compañía dedicada al marketing digital",
             "url": "",
             "startDate": "2021-04-01",
-            "endDate": "2023-07-31",
+            "endDate": "2023-11-30",
             "summary": "Comencé modificando la plataforma original, lo que me permitió adquirir la experiencia de poder leer código realizado por otros desarrolladores y hacer las modificaciones necesarias. En la segunda etapa integré el equipo encargado de desarrollar la nueva plataforma que consiste en una herramienta que predice el presupuesto en publicidad que deben invertir los clientes. Mis tareas principales fueron: implementación y configuración de Material UI, filtros de datos complejos, diseño y creación de componentes React reutilizables, Hooks y páginas,colaborar en el diseño de la UX, implementación de Google Analytics, programación de pares (pair programming),aprobación de Pull Request",
             "highlights": ["stack: React, TypeScript, Redux, Material UI"]
           }
@@ -112,6 +112,13 @@
               "Git - Github",
               "Python Developer"
             ]
+          },
+          {
+            "institution": "Universidad de Buenos Aires",
+            "studyType": "Contabilidad - Finanzas",
+            "startDate": "finalizado: ",
+            "endDate": "2001",
+            "degree": "Egresado con el título de Contador Público"
           }
         ]
       },
@@ -166,6 +173,10 @@
             "gitHub": "https://github.com/javigondeveloper/food-cart-project"
           }
         ]
+      },
+      "background": {
+        "title": "Background",
+        "description": "He trabajado durante muchos años en el sector contable, financiero y de comercio internacional en diversas compañías Argentinas, experiencia que no solo me sirvió para forjar excelentes habilidades blandas sobre todo de comunicación tanto con el equipo de trabajo como con los clientes, incluso en idioma inglés sino que además me permite aportar conocimientos valiosos a la hora de desarrollar software dirigido a las finanzas, al comercio y en general a todo lo que se refiere a la gestión del dinero. Durante este trayecto he sido parte de distintos equipos tanto en el rol de colaborador como líder"
       }
     },
 
@@ -214,13 +225,13 @@
         "title": "Jobs",
         "description": [
           {
-            "name": "Salonero",
+            "name": "Salonero  - freelance contract",
             "position": "Full Stack Developer",
             "shortDescription": "MVP Project",
             "url": "",
             "startDate": "2024-01-01",
-            "endDate": "Actual",
-            "summary": "I am currently working as a full-stack developer on an MVP (Minimum Viable Product) project for a website dedicated to simplifying the search for event venues. In this stage I am in charge of obtaining information from the Google Places API, designing and creating the database in postgreSQL and seeding it. Create the logic to search for the places, participate in the project design.",
+            "endDate": "2024-04-15",
+            "summary": "I worked as a full-stack developer on an MVP (Minimum Viable Product) project for a website dedicated to simplifying the search for event sites. I was in charge of obtaining information from the Google Places API, designing and creating the database in postgreSQL and seeding it. Create the logic to search for the places, participate in the project design.",
             "MVP description": "The minimum viable product is a prototype of the product or service that you want to launch, with minimum functions that allow you to present it to your potential clients and check their interest in it.",
             "highlights": [
               "stack: NextJS, TypeScript, Material UI, tailwind, postgreSQL "
@@ -232,7 +243,7 @@
             "shortDescription": "Web platform replacement for a company dedicated to digital marketing",
             "url": "",
             "startDate": "2021-04-01",
-            "endDate": "2023-07-31",
+            "endDate": "2023-11-30",
             "summary": "I started by modifying the original platform, which allowed me to gain the experience of being able to read code made by other developers and make the necessary modifications. In the second stage I joined the team in charge of developing the new platform, which consists of a tool that predicts the advertising budget that clients must invest. My main tasks were: implementation and configuration of Material UI, complex data filters, design and creation of reusable React components, Hooks and pages, collaborating on UX design, implementation of Google Analytics, pair programming, Pull Request approval",
             "highlights": ["stack: React, TypeScript, Redux, Material UI"]
           }
@@ -281,6 +292,13 @@
               "Git - Github",
               "Python Developer"
             ]
+          },
+          {
+            "institution": "Universidad of Buenos Aires",
+            "studyType": "Accounting -  Finance",
+            "startDate": "finished: ",
+            "endDate": "2001",
+            "degree": "Graduated with the title of Accountant"
           }
         ]
       },
@@ -335,6 +353,10 @@
             "gitHub": "https://github.com/javigondeveloper/food-cart-project"
           }
         ]
+      },
+      "background": {
+        "title": "Background",
+        "description": "I have worked for many years in the accounting, financial and international trade sector in various Argentine companies, an experience that not only helped me develop excellent soft skills, especially communication with both the work team and clients, even in the English language. but also allows me to provide valuable knowledge when developing software aimed at finances, commerce and in general everything related to money management. During this journey I have been part of different teams both in the role of collaborator and leader."
       }
     }
   }

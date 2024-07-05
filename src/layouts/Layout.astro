@@ -21,7 +21,9 @@ const { title, lang } = Astro.props;
   </head>
   <body>
     <Menu lang={lang} />
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
 
@@ -58,6 +60,12 @@ const { title, lang } = Astro.props;
   figure {
     margin: 0%;
     padding: 0%;
+  }
+
+  main {
+    padding: 4rem;
+    margin: 0 auto;
+    width: 100%;
   }
 
   a {
@@ -154,6 +162,10 @@ const { title, lang } = Astro.props;
     p,
     span {
       color: #444;
+    }
+
+    main {
+      padding-top: 1rem;
     }
 
     .print {

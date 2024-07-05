@@ -7,18 +7,19 @@ import Hero from '@/components/sections/Hero.astro';
 import Projects from '@/components/sections/Projects.astro';
 import Skills from '@/components/sections/Skills.astro';
 import Languages from '@/components/sections/Languages.astro';
+import Background from '@/components/sections/Background.astro';
+const langPage = 'es';
 ---
 
-<Layout title="Javier Gonzalez - CV-Portfolio" lang="es">
-  <main>
-    <Hero lang="es" />
-    <About lang="es" />
-    <Experience lang="es" />
-    <Education lang="es" />
-    <Projects lang="es" />
-    <Skills lang="es" />
-    <Languages lang="es" />
-  </main>
+<Layout title="Javier Gonzalez - CV-Portfolio" lang={langPage}>
+  <Hero lang={langPage} />
+  <About lang={langPage} />
+  <Experience lang={langPage} />
+  <Education lang={langPage} />
+  <Projects lang={langPage} />
+  <Skills lang={langPage} />
+  <Languages lang={langPage} />
+  <Background lang={langPage} />
 </Layout>
 
 <style>

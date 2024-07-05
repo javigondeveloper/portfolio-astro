@@ -1,0 +1,11 @@
+---
+import Section from '@/components/Section.astro';
+import { cv } from '@cv';
+type Language = keyof typeof cv;
+const lang: Language = Astro.props.lang;
+const { title, description } = cv[lang].background;
+---
+
+<Section title={title}>
+  <p>{description}</p>
+</Section>

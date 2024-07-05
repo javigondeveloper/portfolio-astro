@@ -11,7 +11,7 @@ import { getPeriod } from '@/utils';
   <ul>
     {
       education.description.map(
-        ({ institution, startDate, endDate, studyType, courses }) => {
+        ({ institution, startDate, endDate, studyType, courses, degree }) => {
           const period = getPeriod(startDate, endDate, lang);
           return (
             <li>
@@ -20,11 +20,12 @@ import { getPeriod } from '@/utils';
                   <div>
                     <h3>{studyType}</h3>
                     <h4>{institution}</h4>
+                    <p class="degree">{degree || ''}</p>
                   </div>
                   <time>{period}</time>
                 </header>
                 <footer>
-                  <p class="highlights">{courses.join(', ')}</p>
+                  <p class="highlights">{courses ? courses.join(', ') : ''}</p>
                 </footer>
               </article>
             </li>
@@ -52,6 +53,12 @@ import { getPeriod } from '@/utils';
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .degree {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color2);
   }
 
   .highlights {
