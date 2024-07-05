@@ -14,7 +14,7 @@ const { download, print } = i18n[lang as keyof typeof i18n];
       <Print />
     </button>
 
-    <button title={download}>
+    <!-- <button title={download}>
       <a
         class="menu-button"
         title={download}
@@ -24,11 +24,11 @@ const { download, print } = i18n[lang as keyof typeof i18n];
       >
         <FileDownload />
       </a>
+    </button> -->
 
-      <ThemeMode lang={lang} />
+    <ThemeMode lang={lang} />
 
-      <Language lang={lang} />
-    </button>
+    <Language lang={lang} />
   </nav>
   <style>
     header {
