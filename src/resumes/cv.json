@@ -9,7 +9,7 @@
         "imagePrint": "./images/profile_sin_BG.webp",
         "imageNoPrint": "./images/profile_BG_celeste.webp",
         "email": "javiergonzalez.webdeveloper@gmail.com",
-        "phone": "+34 623 981566",
+        "phone": "+54 9 11 3219-9017",
         "url": "",
         "summary": {
           "title": "Sobre mi",
@@ -18,10 +18,10 @@
         "location": {
           "address": "",
           "postalCode": "",
-          "city": "Málaga",
-          "countryCode": "ES",
-          "region": "Andalucía",
-          "country": "España"
+          "city": "Ciudad Autónoma de Buenos Aires",
+          "countryCode": "AR",
+          "region": "",
+          "country": "Argentina"
         },
         "profiles": [
           {
@@ -189,7 +189,7 @@
         "imagePrint": "./images/profile_sin_BG.webp",
         "imageNoPrint": "./images/profile_BG_celeste.webp",
         "email": "javiergonzalez.webdeveloper@gmail.com",
-        "phone": "+34 623 981566",
+        "phone": "+54 9 11 3219-9017",
         "url": "",
         "summary": {
           "title": "About me",
@@ -198,10 +198,10 @@
         "location": {
           "address": "",
           "postalCode": "",
-          "city": "Málaga",
-          "countryCode": "ES",
-          "region": "Andalucía",
-          "country": "Spain"
+          "city": "Ciudad Autónoma de Buenos Aires",
+          "countryCode": "AR",
+          "region": "",
+          "country": "Argentina"
         },
         "profiles": [
           {
