@@ -4,16 +4,15 @@
       "language": "Español",
       "basics": {
         "name": "Edgardo Javier González",
-        "nickName": "Javier",
-        "label": "Desarrollador Full Stack",
+        "label": "Contador Público",
         "imagePrint": "./images/profile_sin_BG.webp",
         "imageNoPrint": "./images/profile_BG_celeste.webp",
-        "email": "javiergonzalez.webdeveloper@gmail.com",
+        "email": "ejgcontador.uba@gmail.com",
         "phone": "+54 9 11 3219-9017",
         "url": "",
         "summary": {
           "title": "Sobre mi",
-          "description": "Soy un apasionado desarrollador web full stack con habilidades orientadas a la resolución de problemas y la mejora continua de la experiencia de usuario. Mi enfoque no se limita simplemente a la codificación, sino que se extiende a la creación de soluciones prácticas y útiles que realmente impacten la vida de los usuarios. Con una sólida comprensión de las tecnologías front-end y back-end, me esfuerzo por construir aplicaciones web intuitivas y eficientes. Mi objetivo profesional es contribuir al desarrollo de productos que no solo cumplan con los estándares técnicos, sino que también ofrezcan una experiencia de usuario excepcional, facilitando así la vida de quienes interactúan con mis creaciones."
+          "description": "Soy un profesional con 30 años de experiencia en áreas administrativas, contables, financieras y de comercio exterior, habiendo trabajado en diversas empresas. Poseo un título de Contador Público y en los últimos 3 años he dedicado mi tiempo a la programación de páginas web. Me considero una persona perseverante, responsable y con una gran capacidad para trabajar en equipo, tanto liderando como siendo parte del mismo. Mi trayectoria me ha permitido adquirir una visión integral del negocio, lo cual enriquece mi capacidad para enfrentar y resolver desafíos complejos."
         },
         "location": {
           "address": "",
@@ -22,28 +21,25 @@
           "countryCode": "AR",
           "region": "",
           "country": "Argentina"
-        },
-        "profiles": [
-          {
-            "network": "LinkedIn",
-            "username": "E. Javier González",
-            "url": "https://www.linkedin.com/in/edgardo-javier-gonzalez-full-stack-developer/"
-          },
-          {
-            "network": "GitHub-new",
-            "username": "javigondeveloper",
-            "url": "https://github.com/javigondeveloper"
-          },
-          {
-            "network": "GitHub-old",
-            "username": "JavierGonzalez0211",
-            "url": "https://github.com/JavierGonzalez0211"
-          }
-        ]
+        }
       },
       "work": {
         "title": "Experiencia Laboral",
         "description": [
+          {
+            "name": "Contador Público freelance",
+            "position": "Departamento de administración",
+            "startDate": "2018-01-01",
+            "endDate": "2020-06-30",
+            "summary": "Me he desempeñado como empleado en una empresa PYME dedicada a las mudanzas y el transporte de carga en general, estuve a cargo de la administración de la misma y era encargado de personal "
+          },
+          {
+            "name": "Algodonera del Valle SA",
+            "position": "Departamento de administración",
+            "startDate": "2003-08-01",
+            "endDate": "2017-11-30",
+            "summary": "He trabajado en distintas posiciones dentro de los departamentos de administración y de contabilidad, he sido responsable de comercio exterior donde he tenido 3 personas a cargo. Durante mi labor en los distintos cargos he contribuido a la expansión de la empresa aportando ideas para la reducción de costos financieros, reducción de tiempo en procesos y de informatización de distintos sectores. "
+          },
           {
             "name": "Salonero -  Contrato Freelance",
             "position": "Desarrollador Full Stack",
@@ -73,6 +69,13 @@
         "title": "Educación",
         "description": [
           {
+            "institution": "Universidad de Buenos Aires",
+            "studyType": "Contabilidad - Finanzas",
+            "startDate": "finalizado: ",
+            "endDate": "2001",
+            "degree": "Egresado con el título de Contador Público"
+          },
+          {
             "institution": "Oracle Next Education",
             "studyType": "Desarrollador Full Stack",
             "startDate": "2022-06-01",
@@ -98,49 +101,6 @@
               "GitHub",
               "Metodologías Scrum"
             ]
-          },
-          {
-            "institution": "Udemy.com",
-            "studyType": "Cursos Varios",
-            "startDate": "2020",
-            "endDate": "2022",
-            "courses": [
-              "Desarrollo Web Completo con HTML5 - CSS3 - JS",
-              "JavaScript Moderno",
-              "React JS",
-              "TypeScript",
-              "Git - Github",
-              "Python Developer"
-            ]
-          },
-          {
-            "institution": "Universidad de Buenos Aires",
-            "studyType": "Contabilidad - Finanzas",
-            "startDate": "finalizado: ",
-            "endDate": "2001",
-            "degree": "Egresado con el título de Contador Público"
-          }
-        ]
-      },
-      "skills": {
-        "title": "Conocimientos técnicos",
-        "description": [
-          {
-            "name": "Desarrollador Web Full Stack",
-            "keywords": [
-              "HTML",
-              "CSS",
-              "Node JS",
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "NextJS",
-              "Astro",
-              "SQL",
-              "Figma",
-              "Google Analytics",
-              "Express"
-            ]
           }
         ]
       },
@@ -156,27 +116,6 @@
             "fluency": "Avanzado"
           }
         ]
-      },
-      "projects": {
-        "title": "Proyectos",
-        "description": [
-          {
-            "name": "FOOD-CART",
-            "type": "(e-commerce)",
-            "startDate": "2023-07-01",
-            "endDate": "2023-07-31",
-            "description": "Proyecto Personal, desarrollo parcial de e-commerce, primer proyecto en NextJS",
-            "highlights": [
-              "stack: NextJS, TypeScript, React Hook Form, tailwind, MongoDB, Next-Authjs, Pay Pal "
-            ],
-            "url": "https://food-cart-project.vercel.app/",
-            "gitHub": "https://github.com/javigondeveloper/food-cart-project"
-          }
-        ]
-      },
-      "background": {
-        "title": "Background",
-        "description": "He trabajado durante muchos años en el sector contable, financiero y de comercio internacional en diversas compañías Argentinas, experiencia que no solo me sirvió para forjar excelentes habilidades blandas sobre todo de comunicación tanto con el equipo de trabajo como con los clientes, incluso en idioma inglés sino que además me permite aportar conocimientos valiosos a la hora de desarrollar software dirigido a las finanzas, al comercio y en general a todo lo que se refiere a la gestión del dinero. Durante este trayecto he sido parte de distintos equipos tanto en el rol de colaborador como líder"
       }
     },
 
