@@ -7,20 +7,20 @@
         "label": "Contador Público",
         "imagePrint": "./images/profile_sin_BG.webp",
         "imageNoPrint": "./images/profile_BG_celeste.webp",
-        "email": "ejgcontador.uba@gmail.com",
-        "phone": "+54 9 11 3219-9017",
+        "email": "0211javier.es@gmail.com",
+        "phone": "+34 623 981566",
         "url": "",
         "summary": {
           "title": "Sobre mi",
-          "description": "Soy un profesional con 30 años de experiencia en áreas administrativas, contables, financieras y de comercio exterior, habiendo trabajado en diversas empresas. Poseo un título de Contador Público y en los últimos 3 años he dedicado mi tiempo a la programación de páginas web. Me considero una persona perseverante, responsable y con una gran capacidad para trabajar en equipo, tanto liderando como siendo parte del mismo. Mi trayectoria me ha permitido adquirir una visión integral del negocio, lo cual enriquece mi capacidad para enfrentar y resolver desafíos complejos."
+          "description": "Soy un profesional con 30 años de experiencia en áreas administrativas, contables, financieras, de comercio exterior y seguros, habiendo trabajado en diversas empresas. Poseo un título de Contador Público y en los últimos 3 años he dedicado mi tiempo a la programación de páginas web. Me considero una persona perseverante, responsable y con una gran capacidad para trabajar en equipo, tanto liderando como siendo parte del mismo. Mi trayectoria me ha permitido adquirir una visión integral del negocio, lo cual enriquece mi capacidad para enfrentar y resolver desafíos complejos."
         },
         "location": {
           "address": "",
           "postalCode": "",
-          "city": "Ciudad Autónoma de Buenos Aires",
-          "countryCode": "AR",
-          "region": "",
-          "country": "Argentina"
+          "city": "Torremolinos - Málaga",
+          "countryCode": "ES",
+          "region": "Andalucía",
+          "country": "España"
         }
       },
       "work": {
@@ -38,7 +38,7 @@
             "position": "Departamento de administración",
             "startDate": "2003-08-01",
             "endDate": "2017-11-30",
-            "summary": "He trabajado en distintas posiciones dentro de los departamentos de administración y de contabilidad, he sido responsable de comercio exterior donde he tenido 3 personas a cargo. Durante mi labor en los distintos cargos he contribuido a la expansión de la empresa aportando ideas para la reducción de costos financieros, reducción de tiempo en procesos y de informatización de distintos sectores. "
+            "summary": "He trabajado en distintas posiciones dentro de los departamentos de administración, contabilidad y seguros, he sido responsable de comercio exterior donde he tenido 3 personas a cargo. Durante mi labor en los distintos cargos he contribuido a la expansión de la empresa aportando ideas para la reducción de costos financieros, reducción de tiempo en procesos y de informatización de distintos sectores. En el rubro seguros he sido responsable de la contratacion y administración de pólizas de todo tipo, he participado en liquidaciones de siniestros de gran volumen "
           },
           {
             "name": "Salonero -  Contrato Freelance",
